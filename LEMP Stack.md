@@ -197,15 +197,16 @@ Notice the -p flag in this command, which will prompt you for the password used 
 mysql> SHOW DATABASES;
 ```
 This will give you the following output:
-
+```
 Output
-
-| Database |
-|:---------|
-| example_database |
++--------------------+
+| Database           |
++--------------------+
+| example_database   |
 | information_schema |
-
++--------------------+
 2 rows in set (0.000 sec)
+```
 Next, we’ll create a test table named todo_list. From the MySQL console, run the following statement:
 ```
 CREATE TABLE example_database.todo_list (
@@ -223,15 +224,18 @@ To confirm that the data was successfully saved to your table, run:
 mysql>  SELECT * FROM example_database.todo_list;mysql>  SELECT * FROM example_database.todo_list;
 ```
 You’ll see the following output:
-
+```
 Output
++---------+--------------------------+
 | item_id | content                  |
-|:---------|:--------------------------
++---------+--------------------------+
 |       1 | My first important item  |
 |       2 | My second important item |
 |       3 | My third important item  |
 |       4 | and this one more thing  |
-
++---------+--------------------------+
+4 rows in set (0.000 sec)
+```
 After confirming that you have valid data in your test table, you can exit the MySQL console:
 ```
 mysql> exit
